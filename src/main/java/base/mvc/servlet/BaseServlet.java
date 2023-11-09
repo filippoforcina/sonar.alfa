@@ -36,7 +36,6 @@ public class BaseServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		log.info("doGet - START");
 		request.setAttribute("gift", "disney card");
-		// response.sendRedirect(request.getContextPath() + "/base.jsp?nick=Maurice");
 		RequestDispatcher requestDispatcher = request.getRequestDispatcher("/base.jsp?nick=Maurice");
 		requestDispatcher.forward(request, response);
 	}
